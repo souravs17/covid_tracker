@@ -1,0 +1,26 @@
+.card {
+  margin: 0 2% !important;
+}
+
+.total {
+  border-bottom: 10px solid #6495ed;
+}
+
+.recovered {
+  border-bottom: 10px solid #4cbb17;
+}
+
+.deaths {
+  border-bottom: 10px solid #ed4337;
+}
+
+.totalColor {
+  color: #6495ed;
+}
+.recoveredColor {
+  color: #4cbb17;
+}
+
+.deathsColor {
+  color: #ed4337;
+}
