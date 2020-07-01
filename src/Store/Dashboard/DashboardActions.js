@@ -44,7 +44,6 @@ export const changeCountryName = (payload) => {
     payload,
   };
 };
-
 export const updateCovidData = (payload) => {
   return {
     type: UPDATE_COVID_DATA,
