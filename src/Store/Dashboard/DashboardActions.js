@@ -1,4 +1,3 @@
-import { setUnsetLoadingSpinner } from "../Shared/SharedActions";
 import {
   fetchCountryList,
   fetchCovidDataBasedOnCountry,
@@ -7,12 +6,10 @@ import {
 
 export const getCountryList = () => async (dispatch, getState) => {
   try {
-    dispatch(setUnsetLoadingSpinner(!getState().shared.isLoading));
     let payload = await fetchCountryList();
     dispatch(updateCountryList(payload));
   } catch {
   } finally {
-    dispatch(setUnsetLoadingSpinner(!getState().shared.isLoading));
   }
 };
 
@@ -22,13 +19,10 @@ export const updateCountryName = (payload) => async (dispatch, getState) => {
 
 export const getCovidData = (countryName) => async (dispatch, getState) => {
   try {
-    dispatch(setUnsetLoadingSpinner(!getState().shared.isLoading));
-
     let payload = await getDateBasedOnCountry(countryName);
     dispatch(updateCovidData(payload));
   } catch {
   } finally {
-    dispatch(setUnsetLoadingSpinner(!getState().shared.isLoading));
   }
 };
 
